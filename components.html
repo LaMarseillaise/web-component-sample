@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Sample Web Components</title>
+    <style>
+      .blue-text { color: blue; }
+    </style>
+    <script type='text/javascript' src='./redElement.js'></script>
+    <script type='text/javascript' src='./styledElement.js'></script>
+    <script src="https://unpkg.com/wired-elements@latest/dist/wired-elements.bundled.js"></script>
+  </head>
+  <body>
+    <h1>Web Components</h1>
+    <p style='font-size: 20px'>
+      Web Components are a recent browser feature that allows the creation of custom elements with a shadow DOM.
+    </p>
+
+    <h2>Scoped Styles</h2>
+    <p style='font-size: 20px'>
+      Classes and styles from within a Web Component will not affect outside elements.
+      Classes and styles from outside a Web Component will not affect elements within.
+    </p>
+
+    <div style='font-size: 20px' class='red-background blue-text'>
+      These three divs have the classes 'red-background' and 'blue-text'.
+    </div>
+
+    <red-element style='font-size: 20px'></red-element>
+
+    <div style='font-size: 20px' class='red-background blue-text'>
+      Why is this background not red?
+    </div>
+
+    <h2>External Sources</h2>
+    <p style='font-size: 20px'>
+      Web Components can use external sources for styles, scripts, or even templates.
+      An element could use React/Preact, or be used within a React component.
+      This element includes Material Design Lite:
+    </p>
+    <styled-element></styled-element>
+
+    <h2>Packaged</h2>
+    <p style='font-size: 20px'>
+      Web Components can be packaged as stand-alone elements to include in other sites.
+      These components come from the Wired Elements library, which has components that look hand-drawn:
+    </p>
+
+    <wired-input type="email" placeholder="Email"></wired-input>
+    <wired-input type="password" placeholder="Password"></wired-input>
+    <wired-button>Click Me</wired-button>
+
+    <h2>References</h2>
+    <ul style='font-size: 20px'>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/" target="_blank">
+          MDN: Web Components
+        </a>
+      </li>
+      <li>
+        <a href="https://reactjs.org/docs/web-components.html/" target="_blank">
+          Using React with Web Components
+        </a>
+      </li>
+      <li>
+        <a href="https://www.smashingmagazine.com/2016/12/styling-web-components-using-a-shared-style-sheet/" target="_blank">
+          Sharing Styles in Web Components
+        </a>
+      </li>
+      <li>
+        <a href="https://wiredjs.com/" target="_blank">
+          Wired Elements
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
